@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Swift
-      uses: swiftwasm/action-setup-swift@v1
+      uses: swiftorg/setup-swift@v1
       with:
         swift-version: '6.0.0'
     - name: Build
