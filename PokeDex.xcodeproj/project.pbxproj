@@ -29,9 +29,30 @@
 		013372662CBC47DA0043B302 /* PokeDexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeDexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0152CC022CBC5CA000D8FDA5 /* Exceptions for "PokeDex" folder in "PokeDexTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PokeDexTableView.swift,
+			);
+			target = 0133725B2CBC47DA0043B302 /* PokeDexTests */;
+		};
+		0152CC032CBC5CA000D8FDA5 /* Exceptions for "PokeDex" folder in "PokeDexUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PokeDexTableView.swift,
+			);
+			target = 013372652CBC47DA0043B302 /* PokeDexUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0133724E2CBC47D90043B302 /* PokeDex */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0152CC022CBC5CA000D8FDA5 /* Exceptions for "PokeDex" folder in "PokeDexTests" target */,
+				0152CC032CBC5CA000D8FDA5 /* Exceptions for "PokeDex" folder in "PokeDexUITests" target */,
+			);
 			path = PokeDex;
 			sourceTree = "<group>";
 		};
@@ -186,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 013372472CBC47D90043B302 /* Build configuration list for PBXProject "PokeDex" */;
+			buildConfigurationList = 013372472CBC47D90043B302 /* Build configuration list for PBXProject "Pokedex" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -521,7 +542,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		013372472CBC47D90043B302 /* Build configuration list for PBXProject "PokeDex" */ = {
+		013372472CBC47D90043B302 /* Build configuration list for PBXProject "Pokedex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0133726E2CBC47DA0043B302 /* Debug */,
