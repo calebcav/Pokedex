@@ -9,22 +9,37 @@ import SwiftUI
 
 struct PokeDexImage: View {
     
-    init (image: String, width: CGFloat, height: CGFloat) {
-        self.image = image
+    var imageURL: String
+    var width: CGFloat
+    var height: CGFloat
+    
+    init (imageURL: String, width: CGFloat, height: CGFloat) {
+        self.imageURL = imageURL
         self.width = width
         self.height = height
     }
     var body: some View {
-        AsyncImage(url: URL(string: pokemon.sprites.other.official_artwork.front_default)) {
-            image in
-            image
-                .resizable()
-                .scaledToFit()
-                .frame(width: self.width, height: self.height)
+        AsyncImage(url: URL(string: imageURL)) { phase in
+            switch phase {
+            case .success(let image):
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: self.width, height: self.height)
+            case .failure(_):
+                // Handle error case
+                Text("Error loading image")
+            case .empty:
+                // Show placeholder while loading
+                ProgressView()
+            @unknown default:
+                // Handle unknown cases
+                EmptyView()
+            }
         }
     }
 }
 
 #Preview {
-    PokeDexImage()
+    PokeDexImage(imageURL: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png", width: 50, height: 50)
 }
