@@ -15,9 +15,9 @@ struct PokeDexTableView: View {
         List(viewModel.tableViewPokemon, id: \.0) { item in
             HStack {
                 Text(item.0) // Column 1
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .center)
                 Text(item.1) // Column 2
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .center)
             }
         }
         .navigationTitle("Table View")

@@ -33,16 +33,22 @@
 		0152CC022CBC5CA000D8FDA5 /* Exceptions for "PokeDex" folder in "PokeDexTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				PokeDexImage.swift,
+				PokeDexTableCell.swift,
 				PokeDexTableView.swift,
 				PokeDexTableViewModel.swift,
+				PokemonTypes.swift,
 			);
 			target = 0133725B2CBC47DA0043B302 /* PokeDexTests */;
 		};
 		0152CC032CBC5CA000D8FDA5 /* Exceptions for "PokeDex" folder in "PokeDexUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				PokeDexImage.swift,
+				PokeDexTableCell.swift,
 				PokeDexTableView.swift,
 				PokeDexTableViewModel.swift,
+				PokemonTypes.swift,
 			);
 			target = 013372652CBC47DA0043B302 /* PokeDexUITests */;
 		};

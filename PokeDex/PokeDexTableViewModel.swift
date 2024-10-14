@@ -7,19 +7,12 @@
 
 import Foundation
 
-struct Pokemon: Codable {
-    let name: String
-    let url: String
-}
 
-struct PokemonResponse: Codable {
-    let results: [Pokemon]
-}
 
 class PokeDexTableViewModel: ObservableObject {
     @Published var tableViewPokemon: [(String, String)] = []
     
-    func createListForTableView(pokemon: [Pokemon]) -> [(String, String)] {
+    func createListForTableView(pokemon: [PokemonObject]) -> [(String, String)] {
         var items: [(String, String)] = []
         
         for i in stride(from: 0, to: pokemon.count, by: 2) {
