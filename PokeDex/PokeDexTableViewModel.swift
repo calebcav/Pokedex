@@ -7,14 +7,7 @@
 
 import Foundation
 
-struct PokemonObject: Codable {
-    let name: String
-    let url: String
-}
 
-struct PokemonResponse: Codable {
-    let results: [PokemonObject]
-}
 
 class PokeDexTableViewModel: ObservableObject {
     @Published var tableViewPokemon: [(String, String)] = []
