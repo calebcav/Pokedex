@@ -34,6 +34,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				PokeDexTableView.swift,
+				PokeDexTableViewCell.swift,
 				PokeDexTableViewModel.swift,
 			);
 			target = 0133725B2CBC47DA0043B302 /* PokeDexTests */;
@@ -42,6 +43,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				PokeDexTableView.swift,
+				PokeDexTableViewCell.swift,
 				PokeDexTableViewModel.swift,
 			);
 			target = 013372652CBC47DA0043B302 /* PokeDexUITests */;
