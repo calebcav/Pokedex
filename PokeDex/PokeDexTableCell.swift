@@ -22,9 +22,9 @@ struct PokeDexTableViewCell: View {
     
     var body: some View {
         ZStack {
-            PokeDexImage(imageURL: pokemon.sprites.other.official_artwork.front_default, width: 100, height: 100)
+            PokeDexImage(imageURL: pokemon.sprites.front_default, width: 100, height: 100)
                 .padding()
-                .frame(width: .infinity, height: .infinity, alignment: .trailing)
+
             
                 Spacer()
                 Text(pokemon.name)

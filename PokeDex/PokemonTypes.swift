@@ -29,29 +29,42 @@ struct PokemonOfficialArtwork: Decodable {
 
 struct PokemonSpritesOther: Decodable {
     let official_artwork: PokemonOfficialArtwork
+    
+    enum CodingKeys: String, CodingKey {
+            case official_artwork = "user-name" // Map JSON key to Swift property
+        }
 }
 
 struct PokemonSprites: Decodable {
     let front_default: String
-    let other: PokemonSpritesOther
+//    let other: PokemonSpritesOther
 }
 
 extension PokemonSprites {
     static var mock: PokemonSprites {
-        .init(front_default: "", other: .init(official_artwork: .init(front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png")))
+//        .init(front_default: "", other: .init(official_artwork: .init(front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png")))
+        .init(front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png")
     }
 }
 
-struct Pokemon: Decodable {
+struct Pokemon: Decodable, Hashable {
     let id: Int
     var types: [PokemonType]
     let name: String
     let sprites: PokemonSprites
 }
 
-extension Pokemon {
+extension Pokemon: Equatable {
     static var mock: Pokemon {
         .init(id: 1, types: [PokemonType.mock], name: "Charmander", sprites: PokemonSprites.mock)
+    }
+    
+    static func == (lhs: Pokemon, rhs: Pokemon) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }
 
