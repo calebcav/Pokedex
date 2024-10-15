@@ -24,7 +24,7 @@ struct PokeDexTableViewCell: View {
                 .foregroundColor(.black)
                 .padding()
             
-            PokeDexImage(imageURL: pokemon.sprites.front_default, width: 100, height: 100)
+            PokeDexImage(imageURL: pokemon.sprites.other?.officialArtwork.frontDefault ?? "", width: 100, height: 100)
             
         }.padding()
             .frame(width: 200, height: 200)
