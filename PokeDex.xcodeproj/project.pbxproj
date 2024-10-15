@@ -37,6 +37,7 @@
 				PokeDexTableCell.swift,
 				PokeDexTableView.swift,
 				PokeDexTableViewModel.swift,
+				PokemonActions.swift,
 				PokemonTypes.swift,
 			);
 			target = 0133725B2CBC47DA0043B302 /* PokeDexTests */;
@@ -48,6 +49,7 @@
 				PokeDexTableCell.swift,
 				PokeDexTableView.swift,
 				PokeDexTableViewModel.swift,
+				PokemonActions.swift,
 				PokemonTypes.swift,
 			);
 			target = 013372652CBC47DA0043B302 /* PokeDexUITests */;

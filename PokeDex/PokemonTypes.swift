@@ -19,7 +19,7 @@ struct PokemonType: Decodable {
 
 extension PokemonType {
     static var mock: PokemonType {
-        .init(slot: 1, type: PokemonTypeItem(name: "Fire", url: "https://pokeapi.co/api/v2/type/10/"))
+        .init(slot: 1, type: PokemonTypeItem(name: "fire", url: "https://pokeapi.co/api/v2/type/10/"))
     }
 }
 

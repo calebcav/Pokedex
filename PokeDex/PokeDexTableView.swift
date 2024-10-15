@@ -15,7 +15,9 @@ struct PokeDexTableView: View {
         List(viewModel.tableViewPokemon, id: \.0) { item in
             HStack {
                 PokeDexTableViewCell(pokemon: item.0)
+                Spacer()
                 PokeDexTableViewCell(pokemon: item.1)
+                    
             }
         }
         .navigationTitle("Table View")
