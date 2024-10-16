@@ -12,15 +12,24 @@ struct PokemonTypeItem: Decodable {
     var url: String
 }
 
-struct PokemonType: Decodable {
+struct PokemonType: Decodable, Hashable {
     var slot: Int
     var type: PokemonTypeItem
 }
 
-extension PokemonType {
+extension PokemonType: Equatable {
     static var mock: PokemonType {
         .init(slot: 1, type: PokemonTypeItem(name: "fire", url: "https://pokeapi.co/api/v2/type/10/"))
     }
+    
+    static func == (lhs: PokemonType, rhs: PokemonType) -> Bool {
+        lhs.slot == rhs.slot
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(slot)
+    }
+    
 }
 
 struct Other: Codable {

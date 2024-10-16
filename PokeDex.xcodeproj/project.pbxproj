@@ -39,6 +39,7 @@
 				PokeDexTableViewModel.swift,
 				PokemonActions.swift,
 				PokemonTypes.swift,
+				PokemonTypeView.swift,
 			);
 			target = 0133725B2CBC47DA0043B302 /* PokeDexTests */;
 		};
@@ -51,6 +52,7 @@
 				PokeDexTableViewModel.swift,
 				PokemonActions.swift,
 				PokemonTypes.swift,
+				PokemonTypeView.swift,
 			);
 			target = 013372652CBC47DA0043B302 /* PokeDexUITests */;
 		};
