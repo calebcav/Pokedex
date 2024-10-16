@@ -20,15 +20,13 @@ struct PokeDexTableViewCell: View {
     var body: some View {
         VStack {
             HStack {
-                Text(pokemon.name)
+                Text(pokemon.name.capitalized)
                     .font(.headline)
                     .bold()
                     .foregroundColor(.black)
                     .padding()
                 Spacer()
             }
-            
-
             
             HStack {
                 VStack(alignment: .leading) {
@@ -37,16 +35,16 @@ struct PokeDexTableViewCell: View {
                     }
                     
                 }
-                PokeDexImage(imageURL: pokemon.sprites.other?.officialArtwork.frontDefault ?? "", width: 100, height: 100)
+                PokeDexImage(imageURL: pokemon.sprites.other?.officialArtwork.frontDefault ?? "", width: 75, height: 75)
             }
             
             
-        }.padding()
-            .frame(width: 200, height: 200)
-            .background {
-                Rectangle()
-                    .foregroundColor(getColorFromType(type: pokemon.types[0].type.name).opacity(0.7))
-                    .cornerRadius(15)
+        }
+        .frame(width: 175, height: 175)
+        .background {
+            Rectangle()
+                .foregroundColor(getColorFromType(type: pokemon.types[0].type.name).opacity(0.7))
+                .cornerRadius(15)
             }
     }
 }

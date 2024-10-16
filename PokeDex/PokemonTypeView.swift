@@ -18,7 +18,7 @@ struct PokemonTypeView: View {
     var body: some View {
         Text(pokemonType)
             .foregroundColor(Color.white)
-            .padding(.init(top: 10, leading: 20, bottom: 10, trailing: 20))
+            .padding(.init(top: 5, leading: 15, bottom: 5, trailing: 15))
             .frame(width: .infinity, height: .infinity)
             .background {
                 Rectangle()
