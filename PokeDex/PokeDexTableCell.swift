@@ -19,15 +19,23 @@ struct PokeDexTableViewCell: View {
     
     var body: some View {
         VStack {
+            HStack {
+                Text(pokemon.name)
+                    .font(.headline)
+                    .bold()
+                    .foregroundColor(.black)
+                    .padding()
+                Spacer()
+            }
             
-            Text(pokemon.name)
-                .font(.headline)
-                .bold()
-                .foregroundColor(.black)
-                .padding()
+
+            
             HStack {
                 VStack(alignment: .leading) {
-                    PokemonTypeView(pokemonType: pokemonType[0].type.name).frame(width: 100)
+                    ForEach(pokemonType, id: \.self) { type in
+                        PokemonTypeView(pokemonType: type.type.name).frame(width: 100)
+                    }
+                    
                 }
                 PokeDexImage(imageURL: pokemon.sprites.other?.officialArtwork.frontDefault ?? "", width: 100, height: 100)
             }

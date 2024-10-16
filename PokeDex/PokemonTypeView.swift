@@ -22,7 +22,7 @@ struct PokemonTypeView: View {
             .frame(width: .infinity, height: .infinity)
             .background {
                 Rectangle()
-                    .foregroundColor(getColorFromType(type: pokemonType).opacity(0.4))
+                    .foregroundColor(getColorFromType(type: pokemonType))
                     .cornerRadius(30)
             }
     }
