@@ -24,7 +24,7 @@ struct PokemonDetailedView: View {
             VStack(alignment: .center) {
                 VStack(alignment: .leading) {
                     HStack {
-                        Text(pokemon.name)
+                        Text((pokemon.name).capitalized)
                             .foregroundColor(.white)
                             .font(.title)
                             .bold()
