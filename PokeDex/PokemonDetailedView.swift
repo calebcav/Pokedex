@@ -21,18 +21,26 @@ struct PokemonDetailedView: View {
         ZStack {
             Color(getColorFromType(type: pokemon.types[0].type.name).opacity(0.7))
                 .edgesIgnoringSafeArea(.all)
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(pokemon.name)
-                        .font(.title)
-                        .bold()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 30)
+            VStack(alignment: .center) {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(pokemon.name)
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .bold()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                    }
+                    HStack {
+                        PokemonTypeView(pokemonType: pokemon.types[0].type.name)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                    }
                 }
-                HStack {
-                    PokemonTypeView(pokemonType: pokemon.types[0].type.name)
-                        .padding(.leading, 30)
-                }
+                .padding(.leading, 30)
+                
+                PokeDexImage(imageURL: pokemon.sprites.other?.officialArtwork.frontDefault ?? "", width: 150, height: 150)
+                
             }
             .frame(maxHeight: .infinity, alignment: .top)
             .padding(.top, 50)
