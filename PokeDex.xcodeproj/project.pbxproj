@@ -38,6 +38,7 @@
 				PokeDexTableView.swift,
 				PokeDexTableViewModel.swift,
 				PokemonActions.swift,
+				PokemonDetailedView.swift,
 				PokemonTypes.swift,
 				PokemonTypeView.swift,
 			);
@@ -51,6 +52,7 @@
 				PokeDexTableView.swift,
 				PokeDexTableViewModel.swift,
 				PokemonActions.swift,
+				PokemonDetailedView.swift,
 				PokemonTypes.swift,
 				PokemonTypeView.swift,
 			);
