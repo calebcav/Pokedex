@@ -28,15 +28,12 @@ struct PokemonDetailedView: View {
                             .foregroundColor(.white)
                             .font(.title)
                             .bold()
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        
                     }
                     HStack {
                         PokemonTypeView(pokemonType: pokemon.types[0].type.name)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        
                     }
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 30)
                 
                 PokeDexImage(imageURL: pokemon.sprites.other?.officialArtwork.frontDefault ?? "", width: 250, height: 250)

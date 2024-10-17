@@ -11,8 +11,6 @@ struct PokeDexTableView: View {
     
     @StateObject private var viewModel = PokeDexTableViewModel()
     
-    
-    
     var body: some View {
         NavigationView {
             ScrollView {
