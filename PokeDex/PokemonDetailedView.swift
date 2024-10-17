@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct PokemonDetailedView: View {
+    
     var pokemon: Pokemon
+    
+    @Environment(\.presentationMode) var presentationMode
     
     init(pokemon: Pokemon) {
         self.pokemon = pokemon
@@ -21,6 +24,7 @@ struct PokemonDetailedView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text(pokemon.name)
+                        .font(.title)
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 30)
@@ -33,6 +37,18 @@ struct PokemonDetailedView: View {
             .frame(maxHeight: .infinity, alignment: .top)
             .padding(.top, 50)
         }
+        .navigationBarBackButtonHidden(true)
+        // Hide the default back button
+                .navigationBarItems(leading: Button(action: {
+                    // Action to go back (for example, dismissing the view)
+                    presentationMode.wrappedValue.dismiss()
+                }) {
+                    HStack {
+                        Image(systemName: "arrow.left")
+                            .foregroundColor(.white)
+                    }
+                })
+        
     }
 }
 
