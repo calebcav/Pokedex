@@ -17,13 +17,21 @@ struct PokemonDetailedView: View {
     var body: some View {
         ZStack {
             Color(getColorFromType(type: pokemon.types[0].type.name).opacity(0.7))
+                .edgesIgnoringSafeArea(.all)
             VStack(alignment: .leading) {
-                Text(pokemon.name)
-                    .bold()
+                HStack {
+                    Text(pokemon.name)
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 30)
+                }
                 HStack {
                     PokemonTypeView(pokemonType: pokemon.types[0].type.name)
+                        .padding(.leading, 30)
                 }
             }
+            .frame(maxHeight: .infinity, alignment: .top)
+            .padding(.top, 50)
         }
     }
 }
