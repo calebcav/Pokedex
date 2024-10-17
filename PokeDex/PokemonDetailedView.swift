@@ -39,7 +39,7 @@ struct PokemonDetailedView: View {
                 }
                 .padding(.leading, 30)
                 
-                PokeDexImage(imageURL: pokemon.sprites.other?.officialArtwork.frontDefault ?? "", width: 150, height: 150)
+                PokeDexImage(imageURL: pokemon.sprites.other?.officialArtwork.frontDefault ?? "", width: 250, height: 250)
                 
             }
             .frame(maxHeight: .infinity, alignment: .top)
