@@ -21,6 +21,7 @@ struct PokemonDetailedView: View {
         ZStack {
             Color(getColorFromType(type: pokemon.types[0].type.name).opacity(0.7))
                 .edgesIgnoringSafeArea(.all)
+
             VStack(alignment: .center) {
                 VStack(alignment: .leading) {
                     HStack {
@@ -36,16 +37,39 @@ struct PokemonDetailedView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 30)
                 
-                PokeDexImage(imageURL: pokemon.sprites.other?.officialArtwork.frontDefault ?? "", width: 250, height: 250)
+                VStack {
+                    Text("Sheet")
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .background {
+                    Rectangle()
+                        .fill(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 30))
+                        .padding(.top, UIScreen.main.scale * 60)
+                        .ignoresSafeArea(.all)
+                }
                 
             }
             .frame(maxHeight: .infinity, alignment: .top)
-            .padding(.top, 50)
+            .padding(.top, 100)
+            
+            
+            
+            
+            
+//            .clipShape(RoundedRectangle(cornerRadius: 30))
+//            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+//            .cornerRadius(30)
+//            .background(Color.white)
+//            .padding(.top, (UIScreen.main.bounds.height / 2) - 50)
+            
+            
+            PokeDexImage(imageURL: pokemon.sprites.other?.officialArtwork.frontDefault ?? "", width: 250, height: 250)
+                .padding(.bottom, 200)
+            
         }
         .navigationBarBackButtonHidden(true)
-        // Hide the default back button
                 .navigationBarItems(leading: Button(action: {
-                    // Action to go back (for example, dismissing the view)
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     HStack {

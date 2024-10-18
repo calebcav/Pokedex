@@ -87,11 +87,12 @@ struct Pokemon: Decodable, Hashable {
     var types: [PokemonType]
     let name: String
     let sprites: Sprites
+    let height: Int
 }
 
 extension Pokemon: Equatable {
     static var mock: Pokemon {
-        .init(id: 1, types: [PokemonType.mock], name: "charmander", sprites: Sprites.mock)
+        .init(id: 1, types: [PokemonType.mock], name: "charmander", sprites: Sprites.mock, height: 6)
     }
     
     static func == (lhs: Pokemon, rhs: Pokemon) -> Bool {
