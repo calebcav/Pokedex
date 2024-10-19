@@ -9,12 +9,14 @@ import SwiftUI
 
 struct PokemonDetailedView: View {
     
-    var pokemon: Pokemon
+    @State var pokemon: Pokemon
+    @State var pokemonTypes: [PokemonType]
     
     @Environment(\.presentationMode) var presentationMode
     
     init(pokemon: Pokemon) {
         self.pokemon = pokemon
+        self.pokemonTypes = pokemon.types
     }
     
     var body: some View {
@@ -30,8 +32,10 @@ struct PokemonDetailedView: View {
                             .font(.title)
                             .bold()
                     }
-                    HStack {
-                        PokemonTypeView(pokemonType: pokemon.types[0].type.name)
+                    VStack {
+                        ForEach(pokemonTypes, id: \.self) { type in
+                            PokemonTypeView(pokemonType: type.type.name)
+                        }
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
