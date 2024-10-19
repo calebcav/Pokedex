@@ -38,7 +38,7 @@ struct PokemonDetailedView: View {
                 .padding(.leading, 30)
                 
                 VStack {
-                    Text("Sheet")
+                    PokemonTabView()
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 .background {
