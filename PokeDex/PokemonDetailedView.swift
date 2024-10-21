@@ -45,11 +45,11 @@ struct PokemonDetailedView: View {
                     PokemonTabView()
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .padding(.top, 200)
                 .background {
                     Rectangle()
                         .fill(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 30))
-                        .padding(.top, UIScreen.main.scale * 60)
                         .ignoresSafeArea(.all)
                 }
                 
@@ -60,12 +60,7 @@ struct PokemonDetailedView: View {
             
             
             
-            
-//            .clipShape(RoundedRectangle(cornerRadius: 30))
-//            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-//            .cornerRadius(30)
-//            .background(Color.white)
-//            .padding(.top, (UIScreen.main.bounds.height / 2) - 50)
+
             
             
             PokeDexImage(imageURL: pokemon.sprites.other?.officialArtwork.frontDefault ?? "", width: 250, height: 250)

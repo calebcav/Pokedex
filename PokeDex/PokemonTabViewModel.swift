@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
 class PokemonTabViewModel: ObservableObject {
     @Published var selection: Int = 0
+    @Published var view: any View = PokemonAboutView()
 }
